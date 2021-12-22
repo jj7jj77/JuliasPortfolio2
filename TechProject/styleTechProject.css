@@ -1,0 +1,132 @@
+header, nav, main, section, article, aside, footer{
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	width:1550px;
+	margin-left: auto;
+  	margin-right: auto;
+  	background-color: #f0f0f0; /*gray*/
+  	font-family: Helvetica, Arial, sans-serif;
+  	font-size: 15px;
+}
+
+/*header*/
+.banner { 
+	max-width: auto;
+	background-color: #467fca; /*cyanblue*/
+	color: #b7e1a6;  /*celadon*/
+	padding: 15px 15px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 25px;
+	text-align: center;
+}
+
+.logo {
+  max-width: 120px; /*makes logo img smaller*/
+  margin: 10px -15px 10px 5px; /*spacing around the logo to line it up with other logo*/
+  text-align: right; /*centers the 'back to portfolio'*/
+}
+
+/*nav*/
+nav { 
+	background-color: #3165a7; /*darkblue*/
+	padding: 5px;
+	margin-top: 1px;
+	text-align: center;
+}
+
+li.links{
+	display: inline;
+	background-color: #3165a7; /*darkblue*/
+	padding: 5px;
+	margin: 1px 15px 10px;
+	text-align: center;
+	font-variant: small-caps;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+a:visited.fastlink{
+	color: blue; /*darkblue*/
+}
+
+li a {
+	color: pink; 
+}
+
+ol{
+	list-style-type: disc;
+	font-variant: small-caps;
+}
+
+main {
+	width: 1035px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+section { 
+	background-color: #cab0bb; /*light grayish pink*/
+	margin-top: 10px;
+	padding: 5px 15px;
+	float:left;
+}
+
+article { 
+	background-color: lightgreen;
+	margin-top: 5px;
+	padding: 10px 15px;
+}
+
+.about {
+	font-size: 30px;
+	text-align: center;
+}
+
+p {
+	display: block;
+	margin-left: 10px;
+	font-size:16px;
+}
+
+.cat{
+	font-size:30px;
+	text-align: center;
+}
+
+h2.AR {
+	text-align: center;
+}
+
+a img{
+	padding: 5px;
+	float: right;
+}
+
+h2.VR {
+	text-align: center;
+}
+
+aside {
+	display:block;
+	background-color: lightblue;
+	width: 475px;
+	float: right;
+	padding: 20px;
+	margin-top: 10px;
+}
+
+footer {
+	clear: both;
+	background-color: #20416c; /*dark blue*/
+	color: white;
+	padding: 5px 20px;
+}
+
+
+
+
+

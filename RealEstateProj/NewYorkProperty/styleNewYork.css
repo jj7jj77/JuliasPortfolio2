@@ -1,0 +1,67 @@
+body{
+	background-color:lightskyblue;
+}
+
+h1{
+	color:royalblue;
+	text-align:center;
+}
+
+h2.street{
+	color:steelblue;
+	text-align:center;
+}
+h2{
+	color:mediumseagreen;
+	text-align:center;
+}
+
+ul.details{
+	color:tomato;
+}
+
+p.house{
+	color:slateblue;
+	text-align:center;
+	font-size:17px;
+}
+
+h3{
+	color:darkcyan;
+}
+
+ul.interior{
+	color:greenyellow;
+}
+
+ul.bedbath{
+	color:orangered;
+}
+
+ul.heatcool{
+	color:purple;
+}
+
+ul.garage{
+	color:darkred;
+}
+
+ul.fire{
+	color:sienna;
+}
+
+ul.rooms{
+	color:palevioletred;
+}
+
+ul.floor{
+	color:rosybrown;
+}
+
+ul.stories{
+	color:mediumslateblue;
+}
+
+ul.exterior{
+	color:forestgreen;
+}

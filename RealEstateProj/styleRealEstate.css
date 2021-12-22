@@ -1,0 +1,18 @@
+h1.center{
+	text-align:center;
+	color:blue;
+}
+
+p.center{
+	text-align:center;
+}
+
+h2.center{
+	text-align:center;
+}
+
+.logo {
+	max-width: 100px; /*makes logo img smaller*/
+	text-align: center; /*centers the 'back to portfolio'*/
+}
+

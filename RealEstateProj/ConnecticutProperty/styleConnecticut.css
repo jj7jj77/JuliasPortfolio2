@@ -1,0 +1,63 @@
+body{
+	background-color:peachpuff;
+}
+
+h1{
+	color:lightseagreen;
+	text-align:center;
+}
+
+h2.street{
+	color:darkviolet;
+	text-align:center;
+}
+h2{
+	color:darkorchid;
+	text-align:center;
+}
+
+ul.details{
+	color:palevioletred;
+}
+
+p.house{
+	color:darkcyan;
+	text-align:center;
+	font-size:17px;
+}
+
+h3{
+	color:cornflowerblue;
+}
+
+ul.interior{
+	color:midnightblue;
+}
+
+ul.heatcool{
+	color:mediumvioletred;
+}
+
+ul.garage{
+	color:peru;
+}
+
+ul.fire{
+	color:darkorange;
+}
+
+ul.rooms{
+	color:olivedrab;
+}
+
+ul.floor{
+	color:salmon;
+}
+
+ul.stories{
+	color:darkmagenta;
+}
+
+ul.exterior{
+	color:darkgreen;
+}
