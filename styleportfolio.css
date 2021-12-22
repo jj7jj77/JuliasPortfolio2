@@ -1,0 +1,704 @@
+/*Custom Properties*/
+*,
+*::before,
+*::after {
+	box-sizing: inherit; /*changing how padding is calculated 
+							to make it within a width instead of 
+							adding a total witdh of something*/
+/*	width: 100%;
+	height: 100%;*/
+}
+
+:root { /*this is how custome properies work with the --*/
+	--ff-primary: 'Source Sans Pro', sans-serif; /*ff: font family*/
+	--ff-secondary: 'Source Code Pro', monospace;
+
+	--fw-reg: 300; /*fw: font weight*/
+    --fw-bold: 900;
+    
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: -0.25em 0.25em 0.75em rgba(0,0,0,.25), 
+    	   0.125em 0.125em 0.25em rgba(0,0,0,.15);
+} /*to set up custome properties*/
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+html {
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+
+}
+
+/*General Styles*/
+body{
+    background: var(--clr-light); /*changes the color based on the custom properties*/
+	color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    text-align: center;
+}
+
+section{
+	padding: 4em 2em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong {
+	font-weight: var(--fw-bold)
+}
+
+:focus{
+	outline: 3px solid var(--clr-accent);
+	outline-offset: 3px;
+}
+
+
+/*Buttons*/
+.btn{
+	display: inline-block;
+	padding: .8em 2.5em;
+	background: var(--clr-accent);
+	color: var(--clr-dark);
+	text-decoration: none;
+	cursor: pointer;
+	font-size: .8rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: var(--fw-bold);
+	transition: transform 200ms ease-in-out;
+}
+
+.btn:hover{
+	transform: scale(1.1);
+}
+
+
+/*Typography*/
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+.section__title {
+    margin-bottom: .25em;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__title--intro{
+	font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong{
+	display: block;
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+.section__subtitle--work {
+	color: var(--clr-accent);
+	font-weight: var(--fw-bold);
+	margin-bottom: 2em;
+}
+
+
+/*Header*/
+
+.header { 
+	display: flex; 
+	justify-content: space-between;
+	padding: 1em;
+}
+
+.logo {
+	max-width: 100px;
+	position: fixed; /*moves when scrolling*/ /*if relative, it stays put*/
+}
+
+/*Navigation Bar*/
+
+.navbar {
+  border: 0 solid blue; /*can take this out if don't want line under*/
+  padding: 0px 30px; /*space all around*/ /*0px 30px*/
+  margin-left: 80px; /*moves left*/ /*80px*/
+  position: relative; /*was fixed...made it relative so it stays in one place*/
+}
+
+.nav--list {
+	list-style: none;
+	display: inline-flex;
+	height: 100%;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: left;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-link {
+  font-weight: bold;
+  font-size: 20px; /*30px*/
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #16e0bd;
+  padding: 30px 0px; /*centers the links with the logo*/
+  margin: 0px 20px; /*space between the links*/
+  display: inline-block;
+  position: relative; /*scrunches the links together*/ /*relative keeps it layed out*/
+  opacity: 1.50;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #031D44;
+}
+
+.nav-link-grow-up::before {
+  height: 0%; /*can be 1 to show line on bottonm of each word*/
+  width: 100%;
+  bottom: 20px; /*shows the black bar under each link with the right space*/
+}
+
+.nav-link-grow-up:hover::before {
+  height: 5px;
+}
+
+@media (max-width: 600px) {
+ .navbar{
+		display: grid;
+		position: relative;
+		width: min-content;
+		padding: 60px 5px 15px; /*gives space around the pic for the links to work properly*/
+		margin: 0px auto; /*0 auto*/
+		grid-column-gap: 1em; /*space between the pic and words*/
+		grid-template-columns: min-content max-content;
+ }
+}
+/*Side Navigation (Hamaburger)*/
+
+.nav {
+	position: fixed;
+	background: var(--clr-dark);
+	color: var(--clr-light);
+	top: 0;
+	bottom: 0;
+	left: 20; /*brings the nav bar out when mresizing the screen*/
+	right: 0;
+	z-index: 100;
+	margin-left: 1500px;
+	transform: translateX(100%); /*0% to make it full screen*/ 
+							   /*100% to hide it (button only show)*/ 
+							   /*moving the % of itself*/
+	transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list {
+	list-style: none;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.nav__link {
+	color: inherit;
+	font-weight: var(--fw-bold);
+	font-size: var(--fw-h2);
+	text-decoration: none;
+}
+
+.nav__link:hover {
+	color: var(--clr-accent);
+}
+
+.nav-toggle {
+	padding: .5em; /*was .25em*/
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	position: absolute;
+	right: 3em;
+	top: 2em;
+	z-index: 1000;
+	position: fixed;
+}
+
+.nav-open .nav{
+	color: var(--clr-accent); /*change color when done*/
+	transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+	position: fixed;
+}
+
+.nav-open .hamburger {
+	transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+	transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+	opacity: 0;
+}
+
+
+/*Hamburger of the nav menu*/
+
+.hamburger {
+	display: block;
+	position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+	background: var(--clr-accent);
+	width: 2em;
+	height: 3px;
+	border-radius: 1em;
+	transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.hamburger::before {
+	top: 6px;
+}
+
+.hamburger::after {
+	bottom: 6px;
+}
+
+/*Intro Section*/
+
+.intro {
+	position: relative;
+} /*don't need it: causes the navbar pointer to not go to the bottom right of the K bc of the position of the intro*/
+
+.intro-img {
+	box-shadow: var(--bs);
+}
+
+.section__subtitle--intro{
+	display: block; /*can in inline-block for a shorter bar under name*/
+}
+
+@media (min-width: 600px){
+	.intro{
+		display: grid;
+		width: min-content;
+		padding: 15px; /*gives space around the pic for the links to work properly*/
+		margin: 0px auto; /*0 auto*/
+		grid-column-gap: 1em; /*space between the pic and words*/
+		grid-template-areas:
+			"img title"
+			"img subtitle";
+		grid-template-columns: min-content max-content;
+	}
+
+	.intro-img {
+		grid-area: img;
+		min-width: 300px; /*250px*/ /*the size of the picture*/
+		position: relative;
+		/*z-index: 2;*/
+	}
+
+	.section__subtitle--intro{
+		align-self: start;
+		grid-column: -1 / 1; /*-1 / 1*/ /*makes the teal bar in length*/
+		grid-row: 2;
+		text-align: right;
+		position: relative;
+		left: -1.5em; /*moves the teal bar with the words*/
+		width: calc(100% + 1.5em);
+	}
+}
+
+/* My Services Section */ 
+
+.my-services{
+	background-color: var(--clr-dark);
+	background-image: url(images/service-bg2.jpg);
+	background-size: cover;
+	background-blend-mode: multiply;
+	color: var(--clr-light);
+	text-align: center;
+}
+
+.section__title--services{
+	color: var(--clr-accent);
+	position: relative;
+}
+
+.section__title--services::after{
+	content: ''; /*pseudo element to make them appear*/
+	display: block;
+	width: 2em;
+	height: 1px;
+	margin: 0.5em auto 1em;
+	background: var(--clr-light); /*can also just use currentColor to use the current font color*/
+	opacity: 0.25;
+}
+
+.services {
+	margin-bottom: 3em;
+}
+
+.service {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+	.services {
+		display: flex; /*puts it in 3 columns*/
+		max-width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.service + .service {
+		margin-left: 2em; /*gives the paras space in between*/
+	}
+}
+
+/*About Me Section*/
+
+.about-me {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.about-me-img {
+	box-shadow: var(--bs);
+}
+
+.section__title{
+	display: inline-block; /*can in inline-block for a shorter bar under name*/
+}
+
+@media (min-width: 600px) {
+	.about-me {
+		display: grid;
+		grid-template-columns: 1fr 200px;
+		grid-template-areas: 
+			"title img"
+			"subtitle img"
+			"text img";
+		grid-column-gap: 2em;
+	}
+
+	.section__title--about {
+		grid-area: title;
+	}
+
+	.section__subtitle--about {
+		grid-column: 1 / -1;
+		grid-row: 2;
+		position: relative;
+		left: -1em;
+		width: calc(100% + 2em);
+		padding-left: 1em;
+		padding-right: calc(200px + 4em); /*was 4em*/
+	}
+
+	.about-me-img {
+		grid-area: img;
+		position: relative;
+		z-index: 2;
+	}
+}
+
+
+/*My Work Section*/
+
+.my-work {
+	background-color: var(--clr-dark); 
+	color: var(--clr-light);
+	text-align: center;
+}
+
+.portfolio {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.portfolio-item {
+	background: var(--clr-dark);
+	overflow: hidden; /*grows when hovered with in the box*/
+}
+
+.portfolio-img {
+	transition: 
+		transform 750ms cublic-bezier(.5, 0, .5, 1), /*750ms*/
+		opacity: 250ms linear; /*250ms*/
+}
+
+.portfolio-item:focus {
+	position: relative; /*relative*/ /*not fixed bc it's break an image*/
+	z-index: 2;
+}
+
+.portfolio-img:hover,
+.portfolio-item:focus .portfolio-img {
+	transform: scale(1.2);
+	opacity: .75;
+}
+
+
+/*Individual portfolio item styles*/
+
+.portfolio-item-individual {
+	padding: 0 2em 2em;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+	max-width: 100px; /*the image will be wider. makes it easier to read*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*Footer & icons */ 
+.footer{
+	background: #111;
+	color: var(--clr-accent);
+	text-align: center;
+	padding: 2.5em 0; /*1.5em 0;*/
+	font-size: var(--fs-h3);
+}
+
+.footer a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.footer__link {
+	font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list-link:hover {
+	opacity: .7; /*.7*/
+}
+
+.footer__link:hover {
+	text-decoration: underline;
+}
+
+.social-list {
+	list-style: none;
+	display: flex; 
+	justify-content: center;
+	/*position: relative;	*/
+	margin: 2em 0 0; /*2em 0 0;*/
+	padding: 0;
+}
+
+.social-list-item {
+	margin: 0 1.0em;
+}
+
+.social-list-link {
+	padding: .5em;
+}
+
+
+/* Animation Bar CSS style */
+
+/** {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+	height:100vh;
+    background-color: #f6f7fc;
+}*/
+
+
+
+.circular{
+  height:100px;
+  width: 100px;
+  position: relative;  
+  border:solid green 1px;
+}
+
+.circular .inner{
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: white;
+  border-radius: 100%;
+}
+
+.circular .number{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index:10;
+  font-size:18px;
+  font-weight:500;
+  color:#4158d0;
+}
+
+.circular .bar{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: red;
+ /* -webkit-border-radius: 100%;*/
+  clip: rect(0px, 100px, 100px, 50px);
+}
+
+.circle .bar .progress{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /*-webkit-border-radius: 100%;*/
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #4158d0;
+}
+
+.circle .left .progress{
+  z-index:1;
+  animation: left 4s linear both;
+}
+@keyframes left{
+  100%{
+    transform: rotate(180deg);
+  }
+}
+.circle .right {
+  transform: rotate(180deg);
+ /* z-index:3;*/
+ 
+}
+.circle .right .progress{
+  animation: right 4s linear both;
+  animation-delay:4s;
+}
+
+@keyframes right{
+  100%{
+    transform: rotate(180deg);
+  }
+}
+
+
+/* Animation of the Bar */
+
+#html-bar {
+    animation: html-fill 2s forwards;
+}
+@keyframes html-fill {
+    100%{
+        width: 60%;
+    }
+}
+
+#css-bar {
+    animation: css-fill 2s forwards;
+}
+@keyframes css-fill {
+    100%{
+        width: 40%;
+    }
+}
+
+#js-bar {
+    animation: js-fill 2s forwards;
+}
+@keyframes js-fill {
+    100%{
+        width: 20%;
+    }
+}
+
+#react-bar {
+    animation: react-fill 2s forwards;
+}
+@keyframes react-fill {
+    100%{
+        width: 0%;
+    }
+}
+
+#angular-bar {
+	animation: angular-fill 2s forwards;
+}
+@keyframes angualar-fill {
+	100% {
+		width: 0%;
+	}
+}
+
+
+
+
+

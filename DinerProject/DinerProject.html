@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Diner</title><!-- 
+  <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" type="text/css" href="styleDinerProject.css">
+</head>
+<body>
+  <div class="logo">
+    <a href="/Users/tardislady/Desktop/Julia's Project/Portfolio/portfolio-restaurant-project.html">
+    <img class="logo" src="images/Julialogo.jpg">
+      <br>
+    Back to Portfolio</a>
+  </div>
+
+  <header>
+    <h1 class="center">
+    THE RESTAURANT
+  </h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="DinerProject.html">Our Story</a></li>
+      <li><a href="#.html">Spanish Diner</a></li>
+      <li><a href="#.html">Shop</a></li>
+      <li><a href="#.html">Contact</a></li>
+      <li><a href="#.html">Pickup / Delivery</a></li>
+    </ul>
+  </nav>
+
+<section class="menu-container">
+  <div class="menu-header-title" style='background-color: #3aab3c'>
+    <h2>Menus</h2>
+  </div>
+
+  <div class="buttons-container">
+    <button class="main-button" 
+    id="main-button"> <!-- took out active-menu-titles -->
+      <h3>Main Menu</h3>
+    </button>
+
+    <button class="beverages-button" 
+    id="beverages-button">
+      <h3>Beverages</h3>
+    </button>
+
+    <button class="dessert-button" 
+    id="dessert-button">
+      <h3>Dessert</h3>
+    </button>
+  </div>
+</section>
+
+<!-- <script> 
+ var show = function (elem) {
+//   elem.style.display = 'block';
+// };
+
+// var hide = function (elem) {
+//   elem.style.display = 'none';
+// };
+
+// var toggle = function (elem) {
+
+//   // If the element is visible, hide it
+//   if (window.getComputedStyle(elem).display === 'block') {
+//     hide(elem);
+//     return;
+//   }
+
+//   // Otherwise, show it
+//   show(elem);
+
+// };
+
+// // Listen for click events
+// document.addEventListener('click', function (event) {
+
+//   // Make sure clicked element is our toggle
+//   if (!event.target.classList.contains('toggle')) return;
+
+//   // Prevent default link behavior
+//   event.preventDefault();
+
+//   // Get the content
+//   var content = document.querySelector(event.target.hash);
+//   if (!content) return;
+
+//   // Toggle the content
+//   toggle(content);
+
+ }, false) </script> -->
+
+<!-- Create the Main menu and connect the button to make this menu show -->
+<div>
+<section class="active menu-main" id="mainMenu">
+  <section>
+    <div class="menu-section">
+      <h1>First Course Menu</h1>
+      <h2 class="menu-title">¡COMO EN CASA! (Start your meal like a Spaniard)</h2>
+    </div>
+  </section>
+
+  <div class="itemContainer">
+    <div class="itemBox">
+      <p class="itemName">1 La Hora del Vermút!</p>
+      <p class="itemDesc">(2 each) El Bandarra red vermouth, José Andrés chips, white anchovies and marinated Spanish olives</p>
+      <div class="itemPrice">$25.00</div>
+    </div>
+
+    <div class="itemBox">
+      <p class="itemName">2 Aceitunas marinadas</p>
+      <p class="itemDesc">Seasoned ground beef, kidney beans, chopped onions & peppers, pureed & diced tomatoes, flavored with a variety of spices. Topped with shredded cheddar cheese and sour cream.</p>
+      <div class="itemPrice">$5.00</div>
+    </div>
+  
+    <div class="itemBox">
+      <p class="itemName">3 Tortilla de patatas chips</p>
+      <p class="itemDesc">Spanish omelet with potato chips and caramelized onions</p>
+      <div class="itemPrice">$13.00</div>
+    </div>
+    
+    <div class="itemBox">
+      <p class="itemName">4 Vaso de gazpacho</p>
+      <p class="itemDesc">Our very famous Spanish chilled tomato soup served in a glass, like at home!</p>
+      <div class="itemPrice">$6.00</div>
+    </div>
+
+    <div class="itemBox">
+      <p class="itemName">5 Croquetas de Jamon</p>
+      <p class="itemDesc">Jamon and béchamel fritters</p>
+      <div class="itemPrice">$12.00</div>
+    </div>
+  </div>
+</section>
+</div>
+
+
+<!-- Create the beverages menu and connect the button to make this menu show -->
+<div> 
+<section class="beveragesMenu" id="beveragesMenu">
+  <section>
+    <div class="menu-section">
+      <h1>Beverages Menu</h1>
+      <h2 class="menu-title">Sangria</h2>
+    </div>
+  </section>
+
+  <div class="itemContainer">
+    <div class="itemBox">
+      <p class="itemName">1 SANGRÍA ROJA “LA SUECA”</p>
+      <p class="itemDesc">Fruity, spiced wine on tap. Fall in love with our Sangría? We get it—us too! Ask us for cocktails, wine or beer to go!</p>
+      <div class="itemPrice">$7.00 glass</div>
+      <div class="itemPrice">$35.00 pitcher</div> <!-- make this new itemPrice2? in CSS? -->
+    </div>
+
+    <div class="itemBox">
+      <p class="itemName">2 SANGRÍA ROJA “LA SUECA”</p>
+      <p class="itemDesc">Fruity, spiced wine on tap. Fall in love with our Sangría? We get it—us too! Ask us for cocktails, wine or beer to go!</p>
+      <div class="itemPrice">$7.00 glass</div>
+      <div class="itemPrice">$35.00 pitcher</div>
+    </div>
+  
+    <div class="itemBox">
+      <p class="itemName">3 SANGRÍA ROJA “LA SUECA”</p>
+      <p class="itemDesc">Fruity, spiced wine on tap. Fall in love with our Sangría? We get it—us too! Ask us for cocktails, wine or beer to go!</p>
+      <div class="itemPrice">$7.00 glass</div>
+      <div class="itemPrice">$35.00 pitcher</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- Create the desserts menu and connect the button to make this menu show -->
+<div>
+<section class="menu-desserts" id="dessertMenu">
+  <section>
+    <div class="menu-section">
+    <h1>Desserts Menu</h1>
+    <h2 class="menu-title">Sweet Delicious Desserts</h2>
+  </div>
+</section>
+
+<div class="itemContainer">
+  <div class="itemBox">
+    <p class="itemName">1 Ice Cream</p>
+    <p class="itemDesc">2 scooops of chocolate ice cream</p>
+    <div class="itemPrice">$25.00</div>
+  </div>
+</div>
+</section> 
+</div>
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+<!-- -------------------NEWS LETTER-------------------------------- -->
+<section>
+  <h2 class="newsletter-title">Stay Connected!</h2>
+  <div>
+    <title>Diner Newsletter Registration</title>
+  </div>
+
+  <div class="newsletterForm">
+    <form class="form">
+      <div>
+        <span class="FirstName" style="font-family: Verdana; font-weight: normal; font-size: 13px;">First Name
+          <span class="requiredStar" style=""> *</span>
+        </span>
+        <div class="clear"></div>
+
+        <label>First Name:</label>
+        <input type="text" placeholder="First Name" name="first" required>
+      </div>
+
+      <div>
+        <span class="LastName" style="font-family: Verdana; font-weight: normal; font-size: 13px;">Last Name
+          <span class="requiredStar" style=""> *</span>
+        </span>
+        <div class="clear"></div>
+
+        <label>Last Name:</label>
+        <input type="text" placeholder="Last Name" name="last" required>
+      </div>
+
+      <div>
+        <span class="emailAddress" style="font-family: Verdana; font-weight: normal; font-size: 13px;">Email Address
+          <span class="requiredStar" style=""> *</span>
+        </span>
+        <div class="clear"></div>
+
+        <label>Email Address:</label>
+        <input type="text" placeholder="Email Address" name="mail" required>
+      </div>
+
+      <div>
+        <span class="postalCode" style="font-family: Verdana; font-weight: normal; font-size: 13px;">Postal Code
+          <span class="requiredStar" style=""> *</span>
+        </span>
+        <div class="clear"></div>
+
+        <label>Postal Code:</label>
+        <input type="text" placeholder="Postal Code" name="postal" required>
+      </div>
+
+      <div class="subButton">
+        <input type="submit" value="Subscribe">
+      </div>
+    </div>
+  </form>
+</section>
+
+
+<!-- <section class="menu-content full-menu active menu-main"> -->
+
+<!-- <button type=”button”><a href= " " target=”_blank”/></button> -->
+<script>
+
+//main menu button 
+var mainbtn = document.getElementsByClassName("main-button")[0];
+var main = document.getElementById("mainMenu");
+
+mainbtn.onclick = function(){
+    var hidden = main.style.visibility === "hidden";
+    main.style.visibility = hidden ? "visible" : "hidden";
+};
+
+//beverage menu button
+var bevbtn = document.getElementsByClassName("beverages-button")[0];
+var bev = document.getElementById("beveragesMenu");
+
+bevbtn.onclick = function(){
+    var hidden = bev.style.visibility === "hidden";
+    bev.style.visibility = hidden ? "visible" : "hidden";
+};
+
+//dessert menu button
+var desbtn = document.getElementsByClassName("dessert-button")[0];
+var des = document.getElementById("dessertMenu");
+
+desbtn.onclick = function(){
+    var hidden = des.style.visibility === "hidden";
+    des.style.visibility = hidden ? "visible" : "hidden";
+};
+</script>
+
+</body>
+</html>

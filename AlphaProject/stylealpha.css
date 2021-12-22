@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.output {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-template-rows: 0.5fr 0.5fr 1fr;
+  grid-template-areas:
+    "letter word word"
+    "image image image"
+    "alpha alpha alpha";
+  place-content: center;
+  height: 300px;
+  grid-gap: 15px;
+}
+
+
+.result_letter {
+  grid-area: letter;
+}
+
+.result_word {
+  grid-area: word;
+}
+
+.result_image {
+  grid-area: image;
+}
+
+.output > div:nth-child(1),
+.output > div:nth-child(2),
+.output > div:nth-child(3) {
+  font-size: 72px;
+  display: grid;
+  place-items: center;
+  color: red;
+}
+
+/*moves the letter, word & image section*/
+.output > div:nth-child(1) {
+  margin: 20px -110px 10px 10px;
+}
+
+.output > div:nth-child(2) {
+  margin: 220px 30px 10px 10px;
+}
+
+.output > div:nth-child(3) {
+  margin: 200px -10px 130px 10px;
+}
+
+.alphabetic {
+  grid-area: alpha;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  margin: 20px 30px 0;
+}
+
+.letter {
+  border: 1px solid gray;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.letter:hover {
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+}
+
+/*When the screen is resized*/
+@media screen and (min-width: 740px) and (max-width: 2240px) {
+  .output {
+    grid-template-columns: repeat(3, minmax(min-content, 350px));
+    grid-template-rows: 250px 1fr;
+    grid-template-areas:
+      "letter word image"
+      "alpha alpha alpha";
+  }
+  
+  .output > div:nth-child(1),
+  .output > div:nth-child(2),
+  .output > div:nth-child(3) {
+    font-size: 100px;
+  }
+
+  .output > div:nth-child(1) {
+    margin: -30px -70px -30px -90px;
+  }
+
+  .output > div:nth-child(2) {
+    margin: 30px 110px 30px -20px;
+  }
+  
+  .output > div:nth-child(3) {
+    margin: 30px -80px 30px -190px;
+  }
+
+  .alphabetic {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media screen and (min-width: 520px) and (max-width: 740px) {
+  .output {
+    grid-template-columns: repeat(3, minmax(min-content, 350px));
+    grid-template-rows: 250px 1fr;
+    grid-template-areas:
+      "letter word image"
+      "alpha alpha alpha";
+  }
+  
+  .output > div:nth-child(1),
+  .output > div:nth-child(2),
+  .output > div:nth-child(3) {
+    font-size: 80px;
+  }
+
+  .output > div:nth-child(1) {
+    margin: -30px -40px -30px -10px;
+  }
+
+  .output > div:nth-child(2) {
+    margin: 30px -30px -250px -400px;
+  }
+  
+  .output > div:nth-child(3) {
+    margin: 30px -110px 20px -250px;
+  }
+
+  .alphabetic {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 540px) {
+  .output {
+    grid-template-columns: repeat(3, minmax(min-content, 350px));
+    grid-template-rows: 250px 1fr;
+    grid-template-areas:
+      "letter word image"
+      "alpha alpha alpha";
+  }
+  
+  .output > div:nth-child(1),
+  .output > div:nth-child(2),
+  .output > div:nth-child(3) {
+    font-size: 70px;
+  }
+
+  .output > div:nth-child(1) {
+    margin: -30px -40px -30px -10px;
+  }
+
+  .output > div:nth-child(2) {
+    margin: 30px -130px -250px -400px;
+  }
+  
+  .output > div:nth-child(3) {
+    margin: 30px -110px 20px -250px;
+  }
+
+  .output > result{
+    margin: 15px 30px;
+  }
+
+  .alphabetic {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+
+

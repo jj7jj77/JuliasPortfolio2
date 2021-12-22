@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- content is to make sure that the website functions on small device and big ones.will work responsively-->
+		<title> My Tribute Website</title>
+
+
+<!-- font can u used from google font -->
+		<link rel="stylesheet" type="text/css" href="styleportfolio.css">
+	 <script type="text/javascript" src="index.js"defer></script>
+</head>
+
+
+<!-- this would act as the template file to build out all the different portfolio items to put a bit of info on them -->
+	<body>
+		<header>
+			<div class="logo">
+				<a href="portfolio.html#home" class="nav__item">
+				<img src="images/Julialogo.jpg" alt=""></a>
+			</div>
+
+			<button class="nav-toggle" aria-label="toggle navigation">
+				<span class="hamburger"></span>
+			</button>
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="portfolio.html" class="nav__link">Home</a></li>
+					<li class="nav__item"><a href="portfolio.html#services" class="nav__link">My Serives</a></li>   
+					<!-- Name.html#about: allows you to go back to the home page -->
+					<li class="nav__item"><a href="portfolio.html#about" class="nav__link">About Me</a></li>
+					<li class="nav__item"><a href="portfolio.html#work" class="nav__link">My Work</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Introduction -->
+		<section class="intro" id="home">  <!-- id are usally can be used for anchoring and styling and js functionality -->
+			<h1 class="section__title section__title--intro"> 
+				The <strong> Tribute </strong> Project
+			</h1> <!-- the double -- shows that it's a modifer class, so it's going to modify the section-title class to be a little bit different fromt he default section title bc there are some changes that will be made--> <!-- title of the section -->
+			<p class="section__subtitle section__subtitle--intro"> List of my Work</p>
+			<img src="images/tribute-pic.jpg" alt="work-pic" class ="intro-img"> 
+		</section>
+
+		<div class="portfolio-item-individual">
+
+			<!-- Describe the project. Talk about what you did in the project and why that was a good thing. more info on the insight of the projects-->
+			<p>Birds taught me to sing, when they took me to their king, first I had to fly, in the sky so high so high. </p>
+			<img src="images/portfolio-details.jpg" alt="">
+			<p>If you want to sing this way, think of what you’d like to say, add a tune and you will see, just how easy it can be.</p>
+			<p>Birds taught me to sing, when they took me to their king, first I had to fly, in the sky so high so high. </p>
+			<p>If you want to sing this way, think of what you’d like to say, add a tune and you will see, just how easy it can be.</p>
+			
+		</div>
+
+
+		<!-- Footer -->
+		<footer class="footer">
+			<a href="mailto:julia.ruth.katz77@gamil.com" class="footer__link">julia.ruth.katz77@gmail.com</a>
+			<ul clas="social-list">
+				<li class= "social-list-item">
+					<a class="social-list-link" href="https://github.com/jj7jj77">Github
+						<i class="fab fa-github"></i> <!--icons -->
+					</a>
+				</li>
+				<li class= "social-list-item">
+					<a class="social-list-link" href="https://www.linkedin.com/in/julia-katz027">LinkedIn</a>
+				</li>
+				<li class= "social-list-item">
+					<a class="social-list-link" href="http://jksites.s3-website-us-east-1.amazonaws.com/Index.html">School Projects</a>
+				</li>
+				<li class= "social-list-item">
+					<a class="social-list-link" href="https://codepen.io/jj7jj7">Codepen</a>
+				</li>
+			</ul>
+		</footer>
+		<!-- <script ype="text/javascript" src="js/index.js"></script> --> <!-- type="text/javascript" -->
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
